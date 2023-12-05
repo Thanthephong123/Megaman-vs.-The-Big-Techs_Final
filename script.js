@@ -7,13 +7,16 @@ canvas.height = 600;
 const cellSize = 100;
 const cellGap = 3;
 let numberOfResources = 300;
-let enemiesInterval = 500; //Adj Game difficulty
+let enemiesInterval = 650; //Adj Game difficulty
 let frame = 0;
 let gameOver = false;
 let score = 0;
-const winningScore = 500;
+const winningScore = 650;
 let chosenDefender = 1;
 let gameStart = true;
+let enemyIncreases = [80, 90, 95, 97, 300];
+let enemyIncrease = enemyIncreases[Math.floor(Math.random() * enemyIncreases.length)];
+
 
 const gameGrid = [];
 const defenders = [];
@@ -379,7 +382,7 @@ function handleEnemies(){
         let verticalPosition = Math.floor(Math.random() * 5 + 1) * cellSize + cellGap;
         enemies.push(new Enemy(verticalPosition));
         enemyPositions.push(verticalPosition);
-        if (enemiesInterval > 120) enemiesInterval -= 50; //Adj Game Difficulty
+        if (enemiesInterval > 120) enemiesInterval -= enemyIncrease; //Adj Game Difficulty
     }
 }
 
