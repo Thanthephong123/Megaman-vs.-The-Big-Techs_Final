@@ -9,7 +9,7 @@ body {
   transform: translate(-50%, -50%);
   width: 900px;
   height: 600px;
-  background: white;
+  background: rgb(189, 179, 179);
   font-family: 'Orbitron', sans-serif;
 }
 
